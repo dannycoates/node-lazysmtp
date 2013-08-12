@@ -165,6 +165,10 @@ var Mail    = function (host, debug) {
 
     }
 
+    this.stop = function () {
+        server.close()
+    }
+
 };
 
 util.inherits(Mail, EventEmitter);
