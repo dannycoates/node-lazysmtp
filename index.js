@@ -134,9 +134,7 @@ var Mail    = function (host, debug) {
 
     replies.ehlo    = function (socket) {
 
-        send(socket, "250-" + host );
-        send(socket, "250 8BITMIME");
-        send(socket, "250 Ok");
+        send(socket, "250-" + host + "\r\n250-8BITMIME\r\n250 OK" );
     }
 
     replies.mailFrom    = function (socket) {
